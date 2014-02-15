@@ -5,17 +5,18 @@
     <packaging>jar</packaging>
     <version>1.1-SNAPSHOT</version>
     <name>uuidgen</name>
-    <url>http://wiztools.googlecode.com/</url>
+    <url>https://github.com/wiztools/uuidgen</url>
     <scm>
-        <connection>scm:svn:http://wiztools.googlecode.com/svn/uuidgen/trunk/</connection>
-        <developerConnection>scm:svn:https://wiztools.googlecode.com/svn/uuidgen/trunk/</developerConnection>
-        <url>http://code.google.com/p/wiztools/source/browse/</url>
+        <connection>scm:git:https://github.com/wiztools/uuidgen.git</connection>
+        <developerConnection>scm:git:https://github.com/wiztools/uuidgen.git</developerConnection>
+        <url>https://github.com/wiztools/uuidgen</url>
     </scm>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
                 </configuration>
@@ -23,14 +24,16 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
                 <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
+                    <source>1.6</source>
+                    <target>1.6</target>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -38,13 +41,6 @@
                             <mainClass>org.wiztools.util.uuidgen.Main</mainClass>
                         </manifest>
                     </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <configuration>
-                    <tagBase>https://wiztools.googlecode.com/svn/uuidgen/tags</tagBase>
                 </configuration>
             </plugin>
         </plugins>
